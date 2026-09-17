@@ -326,9 +326,8 @@ a.card:hover .more svg { transform: translateX(4px); }
 .donate-card { background: var(--white); border-radius: calc(var(--radius) + 6px); padding: clamp(28px, 4vw, 44px); box-shadow: var(--shadow); text-align: center; border-top: 6px solid var(--gold); position: sticky; top: 100px; }
 .donate-card h2 { color: var(--plum); font-size: clamp(1.6rem, 2.6vw, 2.1rem); }
 .donate-card p { color: var(--muted); }
-.donate-card stripe-buy-button { display: block; margin: 22px auto 10px; min-height: 60px; }
-.donate-card .secure { display: inline-flex; gap: 8px; align-items: center; font-size: 0.85rem; color: var(--muted); }
-.donate-card .secure svg { width: 16px; height: 16px; }
+.soon-badge { display: inline-block; margin-bottom: 16px; padding: 6px 14px; border-radius: 999px; background: var(--cream); color: var(--plum); font-family: var(--font-display); font-weight: 700; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; }
+.donate-card .btn { margin-top: 6px; }
 .impact-list { list-style: none; padding: 0; margin: 32px 0 0; display: grid; gap: 14px; }
 .impact-list li { display: grid; grid-template-columns: 52px 1fr; gap: 18px; align-items: start; padding: 22px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--line); }
 .impact-list .icon { width: 52px; height: 52px; border-radius: 14px; background: var(--plum); color: var(--gold); display: grid; place-items: center; }

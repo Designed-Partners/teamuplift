@@ -539,13 +539,11 @@ donate = f"""
       </ul>
     </div>
     <aside class="donate-card reveal" aria-labelledby="give-title">
-      <h2 id="give-title">Give securely online</h2>
-      <p>Donations are processed securely through Stripe.</p>
-      <stripe-buy-button
-        buy-button-id="buy_btn_1RiGQ7A08dhhVFKXGdPjQZ2N"
-        publishable-key="pk_live_51Re1MrA08dhhVFKXIvliYzFK18p51MWo3DFgUhQD7Y5KaPx8bRcXjgqNdJBejwGtYNjW63VNj5WRrskKXdaKkrqJ00qjTQejIO">
-      </stripe-buy-button>
-      <span class="secure">{I['lock']} Secure checkout powered by Stripe</span>
+      <span class="soon-badge">Coming soon</span>
+      <h2 id="give-title">Online giving is on its way</h2>
+      <p>We&rsquo;re setting up a secure way to donate online. Check back soon.</p>
+      <p>In the meantime, reach out and our team will help you make a gift.</p>
+      <a class="btn" href="/contact/?interest=donate">Contact us to give {I['arrow']}</a>
       <hr style="border:0;border-top:1px solid var(--line);margin:26px 0">
       <p style="margin:0;font-size:.95rem">Interested in a sponsorship or corporate gift? <a class="text-link" href="/contact/?interest=sponsor">Contact our team</a>.</p>
     </aside>
@@ -566,8 +564,7 @@ donate = f"""
   </div>
 </section>
 """
-page("donate", "Donate", "Donate to Team Uplift Coalition to fund youth programming, scholarships, and community initiatives in Los Angeles.", donate,
-     extra_head='<script async src="https://js.stripe.com/v3/buy-button.js"></script>\n')
+page("donate", "Donate", "Donate to Team Uplift Coalition to fund youth programming, scholarships, and community initiatives in Los Angeles.", donate)
 
 # ---------------- 404 ----------------
 nf = f"""
