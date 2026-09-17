@@ -3,7 +3,7 @@ deployment:
   tasks:
     # Site root on the cPanel account. Change this if the site lives somewhere
     # other than public_html (e.g. an addon domain folder).
-    - export DEPLOYPATH=$HOME/public_html/
+    - export DEPLOYPATH=$HOME/public_html/teamuplift.org
     - /bin/mkdir -p $DEPLOYPATH
     - /bin/cp -R assets $DEPLOYPATH
     - /bin/cp -R who-we-are what-we-do get-involved contact donate $DEPLOYPATH
