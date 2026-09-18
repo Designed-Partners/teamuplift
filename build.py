@@ -85,6 +85,7 @@ def page(slug, title, desc, body, extra_head="", absolute=False):
           <li><a href="/what-we-do/">What We Do</a></li>
           <li><a href="/get-involved/">Get Involved</a></li>
           <li><a href="/donate/">Donate</a></li>
+          <li><a href="/dues/">Members</a></li>
         </ul>
       </div>
       <div>
@@ -565,6 +566,38 @@ donate = f"""
 </section>
 """
 page("donate", "Donate", "Donate to Team Uplift Coalition to fund youth programming, scholarships, and community initiatives in Los Angeles.", donate)
+
+# ---------------- DUES (Members) ----------------
+ZEFFY_EMBED = """<div>
+  <div data-zeffy-embed data-form-url="/embed/ticketing/membership-dues-90"></div>
+  <div data-zeffy-embed-fallback style="display:none;">
+    <div style="position:relative;overflow:hidden;height:450px;width:100%;padding-top:450px;"><iframe title='Donation form powered by Zeffy' style='position: absolute; border: 0; top:0;left:0;bottom:0;right:0;width:100%;height:100%' data-zeffy-embed-src='https://www.zeffy.com/embed/ticketing/membership-dues-90' allowpaymentrequest allowTransparency="true"></iframe></div>
+  </div>
+  <script
+    src="https://www.zeffy.com/embed/v2/zeffy-embed.js"
+    onerror="document.querySelectorAll('[data-zeffy-embed-fallback]').forEach(function(el){el.style.display='block';el.querySelectorAll('iframe[data-zeffy-embed-src]').forEach(function(f){f.src=f.getAttribute('data-zeffy-embed-src');});});">
+  </script>
+</div>"""
+
+dues = f"""
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Members</span>
+    <h1>Membership <span class="accent">dues.</span></h1>
+    <p class="lead">Members can pay their annual dues securely online below. Thank you for supporting the work of Team Uplift.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="dues-card">
+      {ZEFFY_EMBED}
+    </div>
+    <p class="dues-help">Questions about your dues or membership? Email <a class="text-link" href="mailto:info@teamuplift.org">info@teamuplift.org</a>.</p>
+  </div>
+</section>
+"""
+page("dues", "Member Dues", "Pay Team Uplift Coalition membership dues securely online.", dues)
 
 # ---------------- 404 ----------------
 nf = f"""

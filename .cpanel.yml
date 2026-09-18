@@ -6,5 +6,5 @@ deployment:
     - export DEPLOYPATH=$HOME/public_html/teamuplift.org
     - /bin/mkdir -p $DEPLOYPATH
     - /bin/cp -R assets $DEPLOYPATH
-    - /bin/cp -R who-we-are what-we-do get-involved contact donate $DEPLOYPATH
+    - /bin/cp -R who-we-are what-we-do get-involved contact donate dues $DEPLOYPATH
     - /bin/cp index.html 404.html robots.txt sitemap.xml .htaccess $DEPLOYPATH

@@ -1,3 +1,4 @@
 ErrorDocument 404 /404.html
 DirectoryIndex index.html
 Options -Indexes
+RedirectMatch 301 ^/Dues/?$ /dues/
