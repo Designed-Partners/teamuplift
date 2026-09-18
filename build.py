@@ -516,6 +516,17 @@ contact = f"""
 page("contact", "Contact", "Contact Team Uplift Coalition about volunteering, partnerships, sponsorships, donations, or youth programs in Los Angeles.", contact)
 
 # ---------------- DONATE ----------------
+ZEFFY_DONATE = """<div>
+  <div data-zeffy-embed data-form-url="/embed/donation-form/donate-to-change-lives-24168"></div>
+  <div data-zeffy-embed-fallback style="display:none;">
+    <div style="position:relative;overflow:hidden;height:450px;width:100%;"><iframe title='Donation form powered by Zeffy' style='position: absolute; border: 0; top:0;left:0;bottom:0;right:0;width:100%;height:100%' data-zeffy-embed-src='https://www.zeffy.com/embed/donation-form/donate-to-change-lives-24168' allowpaymentrequest allowTransparency="true"></iframe></div>
+  </div>
+  <script
+    src="https://www.zeffy.com/embed/v2/zeffy-embed.js"
+    onerror="document.querySelectorAll('[data-zeffy-embed-fallback]').forEach(function(el){el.style.display='block';el.querySelectorAll('iframe[data-zeffy-embed-src]').forEach(function(f){f.src=f.getAttribute('data-zeffy-embed-src');});});">
+  </script>
+</div>"""
+
 donate = f"""
 <section class="page-hero">
   <div class="wrap">
@@ -540,11 +551,9 @@ donate = f"""
       </ul>
     </div>
     <aside class="donate-card reveal" aria-labelledby="give-title">
-      <span class="soon-badge">Coming soon</span>
-      <h2 id="give-title">Online giving is on its way</h2>
-      <p>We&rsquo;re setting up a secure way to donate online. Check back soon.</p>
-      <p>In the meantime, reach out and our team will help you make a gift.</p>
-      <a class="btn" href="/contact/?interest=donate">Contact us to give {I['arrow']}</a>
+      <h2 id="give-title">Give securely online</h2>
+      <p>Your donation is processed securely through Zeffy.</p>
+      {ZEFFY_DONATE}
       <hr style="border:0;border-top:1px solid var(--line);margin:26px 0">
       <p style="margin:0;font-size:.95rem">Interested in a sponsorship or corporate gift? <a class="text-link" href="/contact/?interest=sponsor">Contact our team</a>.</p>
     </aside>
